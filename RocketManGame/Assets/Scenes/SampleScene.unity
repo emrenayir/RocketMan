@@ -129,6 +129,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 383132317}
     m_Modifications:
+    - target: {fileID: -6057140222963153312, guid: bc017545ff05c4ecc9db8ee65f7c7728,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e3331f66420d77d4fab00f3a5e454747, type: 2}
     - target: {fileID: -4216859302048453862, guid: bc017545ff05c4ecc9db8ee65f7c7728,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -147,7 +152,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: bc017545ff05c4ecc9db8ee65f7c7728,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0.38268313
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: bc017545ff05c4ecc9db8ee65f7c7728,
         type: 3}
@@ -162,7 +167,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: bc017545ff05c4ecc9db8ee65f7c7728,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9238797
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: bc017545ff05c4ecc9db8ee65f7c7728,
         type: 3}
@@ -172,7 +177,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: bc017545ff05c4ecc9db8ee65f7c7728,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 45.000004
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: bc017545ff05c4ecc9db8ee65f7c7728,
         type: 3}
@@ -202,7 +207,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: bc017545ff05c4ecc9db8ee65f7c7728,
         type: 3}
       propertyPath: m_Name
-      value: Rocketman_Animated
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc017545ff05c4ecc9db8ee65f7c7728, type: 3}
@@ -489,6 +494,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90ed8888f75aea7458141d0dfe4c365c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  screenWithEffectInAngles: 120
+  pixelDivider: 0
+  currentPixelPosHorizontal: 0
+  pixelStartPosHorizontal: 0
+  startActive: 0
+--- !u!1 &907762177 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: bc017545ff05c4ecc9db8ee65f7c7728,
+    type: 3}
+  m_PrefabInstance: {fileID: 233590268}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &907762181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907762177}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f32e5e57289197d47b0dc141116bf0f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allowWastedTouch: 0
+  useLimit: 1
+  reverseInput: 0
+  inputHorizontalElseVertical: 1
+  rotationLocalAxis: 121
+  rotationSpeed: 20
+  startRotation: {x: 0, y: 0, z: 0}
+  startActive: 0
+  pixelStartPosHorizontal: 0
+  currentPixelPosHorizontal: 0
+  screenWithEffectInAngles: 120
+  pixelDivider: 0
+  offsetRotation: 0
+  minRotationAngleLimit: 0
+  maxRotationAngleLimit: 35
+  initialBaseRotation: 0
+  rotationMax: 0
+  rotationMin: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

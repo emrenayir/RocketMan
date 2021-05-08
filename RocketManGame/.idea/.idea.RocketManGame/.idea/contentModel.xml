@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\emre\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\emre\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_RocketManGame.1947301038.00" t="ExcludeRecursive" />
+    <e p="C:\Users\emre\Desktop\New\RocketMan\RocketManGame" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="_MK" t="Include">
+          <e p="MKToon" t="Include">
+            <e p="Editor" t="Include">
+              <e p="MKToonEditor.cs" t="Include" />
+              <e p="MKToonLegacyKeywordUpdater.cs" t="Include" />
+            </e>
+            <e p="MKToonMaterialHelper.cs" t="Include" />
+            <e p="Shader" t="Include">
+              <e p="Inc" t="Include">
+                <e p="Common" t="Include">
+                  <e p="MKToonDef.cginc" t="Include" />
+                  <e p="MKToonInc.cginc" t="Include" />
+                  <e p="MKToonLight.cginc" t="Include" />
+                  <e p="MKToonV.cginc" t="Include" />
+                </e>
+                <e p="Forward" t="Include">
+                  <e p="MKToonForward.cginc" t="Include" />
+                  <e p="MKToonForwardAddSetup.cginc" t="Include" />
+                  <e p="MKToonForwardBaseSetup.cginc" t="Include" />
+                  <e p="MKToonForwardIO.cginc" t="Include" />
+                </e>
+                <e p="Meta" t="Include">
+                  <e p="MKToonMeta.cginc" t="Include" />
+                  <e p="MKToonMetaIO.cginc" t="Include" />
+                  <e p="MKToonMetaSetup.cginc" t="Include" />
+                </e>
+                <e p="Outline" t="Include">
+                  <e p="MKToonOutlineOnlyBase.cginc" t="Include" />
+                  <e p="MKToonOutlineOnlyIO.cginc" t="Include" />
+                  <e p="MKToonOutlineOnlySetup.cginc" t="Include" />
+                </e>
+                <e p="ShadowCaster" t="Include">
+                  <e p="MKToonShadowCaster.cginc" t="Include" />
+                  <e p="MKToonShadowCasterIO.cginc" t="Include" />
+                  <e p="MKToonShadowCasterSetup.cginc" t="Include" />
+                </e>
+                <e p="Surface" t="Include">
+                  <e p="MKToonSurface.cginc" t="Include" />
+                  <e p="MKToonSurfaceIO.cginc" t="Include" />
+                </e>
+              </e>
+              <e p="MKToonDefault.shader" t="Include" />
+              <e p="MKToonDefaultOutline.shader" t="Include" />
+              <e p="MKToonMobile.shader" t="Include" />
+              <e p="MKToonMobileOutline.shader" t="Include" />
+              <e p="MKToonOutlineOnly.shader" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="External Assets" t="Include">
+          <e p="Customizable Skybox" t="Include">
+            <e p="Stylized Sky" t="Include">
+              <e p="shaders" t="Include">
+                <e p="Stylized Sky.shader" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="DOTween" t="Include">
+            <e p="Modules" t="Include">
+              <e p="DOTweenModuleAudio.cs" t="Include" />
+              <e p="DOTweenModulePhysics.cs" t="Include" />
+              <e p="DOTweenModulePhysics2D.cs" t="Include" />
+              <e p="DOTweenModuleSprite.cs" t="Include" />
+              <e p="DOTweenModuleUI.cs" t="Include" />
+              <e p="DOTweenModuleUnityVersion.cs" t="Include" />
+              <e p="DOTweenModuleUtils.cs" t="Include" />
+            </e>
+            <e p="readme.txt" t="Include" />
+          </e>
+          <e p="Epic Toon FX" t="Include">
+            <e p="Demo" t="Include">
+              <e p="ParticleEffectsShowcase" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="ParticleEffectsLibrary.cs" t="Include" />
+                  <e p="PEButtonScript.cs" t="Include" />
+                  <e p="PEDestoryTimed.cs" t="Include" />
+                  <e p="UICanvasManager.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Scripts" t="Include">
+                <e p="ETFXButtonScript.cs" t="Include" />
+                <e p="ETFXFireProjectile.cs" t="Include" />
+                <e p="ETFXLoopScript.cs" t="Include" />
+                <e p="ETFXMouseOrbit.cs" t="Include" />
+                <e p="ETFXProjectileScript.cs" t="Include" />
+                <e p="ETFXSceneManager.cs" t="Include" />
+              </e>
+            </e>
+            <e p="ETFX Readme.txt" t="Include" />
+            <e p="Scripts" t="Include">
+              <e p="ETFXLightFade.cs" t="Include" />
+              <e p="ETFXPitchRandomizer.cs" t="Include" />
+              <e p="ETFXRotation.cs" t="Include" />
+            </e>
+          </e>
+          <e p="polyquest_v1_fog" t="Include">
+            <e p="shaders" t="Include">
+              <e p="Editor" t="Include">
+                <e p="PolyboxShaderGUI.cs" t="Include" />
+              </e>
+              <e p="PolyboxCore.cginc" t="Include" />
+              <e p="PolyboxCoreForward.cginc" t="Include" />
+              <e p="PolyboxCoreForwardSimple.cginc" t="Include" />
+              <e p="PolyboxStandard.shader" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="StickBendAndRelease.cs" t="Include" />
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="RocketManGame.sln" t="IncludeFlat" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

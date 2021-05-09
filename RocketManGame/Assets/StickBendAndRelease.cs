@@ -16,6 +16,8 @@ public class StickBendAndRelease : MonoBehaviour
     private static readonly int Start1 = Animator.StringToHash("Start");
     private static readonly int StickBender = Animator.StringToHash("StickBender");
 
+    public bool releasePlayer = false;
+    
     public StickBendAndRelease()
     {
         isWorking = true;
@@ -44,14 +46,20 @@ public class StickBendAndRelease : MonoBehaviour
                 currentPixelPosHorizontal = Input.mousePosition.x;
                 float pixelOffset = (currentPixelPosHorizontal - pixelStartPosHorizontal)/1000;
                 pixelOffset =  Mathf.Clamp(pixelOffset, -1f, 0f);
-                Debug.Log(pixelOffset);
                 stickAnimator.SetFloat(StickBender,-pixelOffset);
             }
             if (Input.GetMouseButtonUp(0))
             {
                 stickAnimator.SetBool(Start1,false);
                 isWorking = false;
+                //geçici
+                Invoke("ReleasePlayer",.24f);
             }
         }
+    }
+
+    private void ReleasePlayer()
+    {
+        releasePlayer = true;
     }
 }

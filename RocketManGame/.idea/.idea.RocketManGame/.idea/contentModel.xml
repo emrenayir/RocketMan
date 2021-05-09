@@ -56,6 +56,8 @@
             </e>
           </e>
         </e>
+        <e p="CameraManager.cs" t="Include" />
+        <e p="defaultTracker5.cs" t="Include" />
         <e p="External Assets" t="Include">
           <e p="Customizable Skybox" t="Include">
             <e p="Stylized Sky" t="Include">
@@ -114,6 +116,7 @@
             </e>
           </e>
         </e>
+        <e p="PlayerController.cs" t="Include" />
         <e p="slideRotator.cs" t="Include" />
         <e p="StickBendAndRelease.cs" t="Include" />
       </e>

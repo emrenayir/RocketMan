@@ -116,7 +116,10 @@
             </e>
           </e>
         </e>
+        <e p="GameManager.cs" t="Include" />
         <e p="PlayerController.cs" t="Include" />
+        <e p="playerMovement.cs" t="Include" />
+        <e p="Rotator.cs" t="Include" />
         <e p="slideRotator.cs" t="Include" />
         <e p="StickBendAndRelease.cs" t="Include" />
       </e>

@@ -31,15 +31,23 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Rotator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Climb_Game/Climb_Game/Assets/Scripts/ExternalScripts/Basics/movement/playerMovement.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Climb_Game/Climb_Game/Assets/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
-    <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/StickBendAndRelease.cs" />
-      <option value="$PROJECT_DIR$/Assets/PlayerController.cs" />
-      <option value="$PROJECT_DIR$/Assets/CameraManager.cs" />
-    </changedPaths>
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Rotator.cs" />
+        <option value="$PROJECT_DIR$/Assets/playerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/StickBendAndRelease.cs" />
+        <option value="$PROJECT_DIR$/Assets/CameraManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/PlayerMovement.cs" />
+      </list>
+    </option>
   </component>
   <component name="ProjectId" id="1sFQMItd6mYeQE0couzLr379nIp" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -64,9 +72,8 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
-      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
-        <list />
+        <set />
       </option>
       <method v="2" />
     </configuration>
@@ -74,9 +81,8 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
-      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
-        <list />
+        <set />
       </option>
       <method v="2" />
     </configuration>
@@ -90,6 +96,7 @@
       <option name="presentableId" value="Default" />
       <updated>1620465810488</updated>
       <workItem from="1620465817036" duration="8363000" />
+      <workItem from="1620653435861" duration="11511000" />
     </task>
     <servers />
   </component>

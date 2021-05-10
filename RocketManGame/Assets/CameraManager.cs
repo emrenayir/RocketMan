@@ -19,11 +19,15 @@ public class CameraManager : MonoBehaviour
         }
         
     }
+
+    [SerializeField] public PlayerMovement playerMovement;
     
     [SerializeField] private GameObject camPosition;
     [SerializeField] private GameObject player;
-    
+
+    public bool turnOffRb = false;
     public bool changeCameraToSecondPosition  = false;
+    public bool playerAirControl  = false;
 
     private Camera mainCam;
     // Start is called before the first frame update
@@ -35,20 +39,23 @@ public class CameraManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        mainCam.transform.DOLookAt(player.transform.position, 
+            0f);
         if (changeCameraToSecondPosition)
         {
             MoveCamera();
-            //changeCameraToSecondPosition = false;
         }
     }
 
     private void MoveCamera()
     {
-        mainCam.transform.DOMove(camPosition.gameObject.transform.position, 1f);
-        mainCam.transform.DOLookAt(player.transform.position, 1f).OnComplete((() =>
+        this.transform.parent = player.gameObject.transform;
+        mainCam.transform.DOMove(camPosition.gameObject.transform.position, 1f).OnComplete((() =>
         {
-            this.transform.parent = player.gameObject.transform;
+            //
         }));
-        
+        changeCameraToSecondPosition = false;
+        playerAirControl = true;
     }
+    
 }

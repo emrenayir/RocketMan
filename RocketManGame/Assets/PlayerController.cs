@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private StickBendAndRelease stickBendAndRelease;
+    [SerializeField] private float startSpeed;
+    
     private Rigidbody playerRb;
     
     // Start is called before the first frame update
@@ -19,9 +21,10 @@ public class PlayerController : MonoBehaviour
         if (stickBendAndRelease.releasePlayer)
         {
             playerRb.useGravity = true;
-            playerRb.AddForce((Vector3.forward + new Vector3(0f,0.7f,0f)) * 20f,ForceMode.Impulse);
+            playerRb.AddForce(new Vector3(0f,0.3f,.5f) * startSpeed,ForceMode.Impulse);
             this.gameObject.transform.parent = null;
             stickBendAndRelease.releasePlayer = false;
+            CameraManager.Instance.changeCameraToSecondPosition = true;
         }
     }
 }

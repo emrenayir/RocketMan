@@ -53,7 +53,7 @@ public class StickBendAndRelease : MonoBehaviour
                 stickAnimator.SetBool(Start1,false);
                 isWorking = false;
                 //geçici
-                Invoke("ReleasePlayer",.24f);
+                Invoke("ReleasePlayer",.23f);
             }
         }
     }

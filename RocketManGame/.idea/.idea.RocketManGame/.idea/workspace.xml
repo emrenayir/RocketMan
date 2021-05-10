@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd0a8ef4-99c8-47d9-9b43-b53ecc57a54b" name="Default Changelist" comment="" />
+    <list default="true" id="dd0a8ef4-99c8-47d9-9b43-b53ecc57a54b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/CameraManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CameraManager.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,17 +31,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/Assets/Rotator.cs" />
-        <option value="$PROJECT_DIR$/Assets/StickBendAndRelease.cs" />
-        <option value="$PROJECT_DIR$/Assets/CameraManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/PlayerController.cs" />
-      </list>
-    </option>
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/StickBendAndRelease.cs" />
+      <option value="$PROJECT_DIR$/Assets/PlayerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/CameraManager.cs" />
+    </changedPaths>
   </component>
   <component name="ProjectId" id="1sFQMItd6mYeQE0couzLr379nIp" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -64,8 +64,9 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
-        <set />
+        <list />
       </option>
       <method v="2" />
     </configuration>
@@ -73,8 +74,9 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
-        <set />
+        <list />
       </option>
       <method v="2" />
     </configuration>
@@ -106,6 +108,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

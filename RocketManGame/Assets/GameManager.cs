@@ -19,14 +19,10 @@ public class GameManager : MonoBehaviour
             return _instance;
         }
     }
+    
 
-    public bool isFail;
-
-    private void Update()
+    public void ReloadScene()
     {
-        if (isFail)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

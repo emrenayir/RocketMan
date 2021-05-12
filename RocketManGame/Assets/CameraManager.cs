@@ -34,11 +34,10 @@ public class CameraManager : MonoBehaviour
     {
         mainCam = this.gameObject.GetComponent<Camera>();
     }
-    
     void Update()
     {
-        mainCam.transform.DOLookAt(player.transform.position, 
-            0f);
+        
+        mainCam.transform.LookAt(player.transform.position);
         if (changeCameraToSecondPosition)
         {
             MoveCamera();

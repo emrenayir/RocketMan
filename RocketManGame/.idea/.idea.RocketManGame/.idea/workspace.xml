@@ -37,6 +37,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Rotator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GroundTile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Hook_Game/Hook_Game/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GroundCollisions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -47,13 +48,14 @@
         <option value="$PROJECT_DIR$/Assets/Rotator.cs" />
         <option value="$PROJECT_DIR$/Assets/GroundTile.cs" />
         <option value="$PROJECT_DIR$/Assets/PlayerMovement.cs" />
-        <option value="$PROJECT_DIR$/Assets/CameraManager.cs" />
         <option value="$PROJECT_DIR$/Assets/StickBendAndRelease.cs" />
         <option value="$PROJECT_DIR$/../../Hook_Game/Hook_Game/Assets/Scripts/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/PlayerController.cs" />
-        <option value="$PROJECT_DIR$/Assets/GroundDetection.cs" />
         <option value="$PROJECT_DIR$/Assets/GroundSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/GroundDetection.cs" />
+        <option value="$PROJECT_DIR$/Assets/GroundCollisions.cs" />
+        <option value="$PROJECT_DIR$/Assets/CameraManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameManager.cs" />
       </list>
     </option>
   </component>
@@ -106,7 +108,9 @@
       <workItem from="1620465817036" duration="8363000" />
       <workItem from="1620653435861" duration="11511000" />
       <workItem from="1620813163801" duration="621000" />
-      <workItem from="1620813808284" duration="14562000" />
+      <workItem from="1620813808284" duration="17312000" />
+      <workItem from="1620840749341" duration="47000" />
+      <workItem from="1620841020282" duration="2896000" />
     </task>
     <servers />
   </component>

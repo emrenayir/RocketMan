@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private TrailRenderer rightWingTrail;
     [SerializeField] private TrailRenderer playerTrail;
     [SerializeField] private GroundSpawner groundSpawner;
+    [SerializeField] private GameObject FailUi;
     
     private slideRotator slideRotator;
     private Rigidbody playerRb;
@@ -52,6 +53,11 @@ public class PlayerController : MonoBehaviour
         if (!CameraManager.Instance.playerAirControl && Input.GetMouseButtonUp(0))
         {
             CloseWings();
+        }
+
+        if (playerMovement.onGround)
+        {
+            Fail();
         }
     }
 
@@ -142,21 +148,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.CompareTag("Ground"))
-        {
-            Fail();
-        }
-    }
-
     private void Fail()
     {
-        Debug.Log("anan");
         playerAnim.SetBool(Open, false);
         rotator.work = false;
         playerMovement.constantPower = 0f;
-        GameManager.Instance.isFail = true;
+        FailUi.SetActive(true);
     }
 
     private void CylinderJump()

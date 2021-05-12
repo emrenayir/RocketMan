@@ -12,8 +12,10 @@ public class GroundDetection : MonoBehaviour
     
     private void OnTriggerExit(Collider other)
     {
-        CreateGround(lastDetectedWall);
-        Debug.Log("anan");
+        if (other.gameObject.CompareTag("Player"))
+        {
+            CreateGround(lastDetectedWall);
+        }
     }
 
     private void CreateGround(int lastdetected)

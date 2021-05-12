@@ -13,6 +13,7 @@ TagManager:
   - Left
   - Right
   - Tile
+  - GroundCheck
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Ground
   - 
   - 
   - 

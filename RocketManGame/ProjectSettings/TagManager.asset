@@ -8,6 +8,11 @@ TagManager:
   - CubePlatform
   - CylinderPlatform
   - Ground
+  - Front
+  - Back
+  - Left
+  - Right
+  - Tile
   layers:
   - Default
   - TransparentFX

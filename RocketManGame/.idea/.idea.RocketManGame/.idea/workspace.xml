@@ -31,10 +31,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/GroundDetection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Climb_Game/Climb_Game/Assets/Scripts/ExternalScripts/Basics/movement/playerMovement.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Climb_Game/Climb_Game/Assets/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Rotator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GroundTile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Hook_Game/Hook_Game/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -42,12 +44,15 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/playerMovement.cs" />
-        <option value="$PROJECT_DIR$/Assets/CameraManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Rotator.cs" />
-        <option value="$PROJECT_DIR$/Assets/StickBendAndRelease.cs" />
-        <option value="$PROJECT_DIR$/Assets/PlayerMovement.cs" />
-        <option value="$PROJECT_DIR$/Assets/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/GroundTile.cs" />
+        <option value="$PROJECT_DIR$/Assets/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/CameraManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/StickBendAndRelease.cs" />
+        <option value="$PROJECT_DIR$/../../Hook_Game/Hook_Game/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/GroundDetection.cs" />
         <option value="$PROJECT_DIR$/Assets/GroundSpawner.cs" />
       </list>
     </option>
@@ -100,6 +105,8 @@
       <updated>1620465810488</updated>
       <workItem from="1620465817036" duration="8363000" />
       <workItem from="1620653435861" duration="11511000" />
+      <workItem from="1620813163801" duration="621000" />
+      <workItem from="1620813808284" duration="14562000" />
     </task>
     <servers />
   </component>

@@ -11,7 +11,8 @@ public class StickBendAndRelease : MonoBehaviour
     [SerializeField] private float currentPixelPosHorizontal;
     [SerializeField] private float pixelStartPosHorizontal;
     [SerializeField] private bool startActive;
-    [SerializeField] private float startPower;
+    [SerializeField] public float startPower;
+    [SerializeField] public bool flag = false;
     
     
     private static readonly int Start1 = Animator.StringToHash("Start");
@@ -23,15 +24,11 @@ public class StickBendAndRelease : MonoBehaviour
     {
         isWorking = true;
     }
-
-    // Start is called before the first frame update
     void Start()
     {
         pixelDivider = Screen.width / screenWithEffectInAngles;
         stickAnimator = this.gameObject.GetComponent<Animator>();
     }
-
-    // Update is called once per frame
     void Update()
     {
         if (isWorking)
@@ -54,12 +51,11 @@ public class StickBendAndRelease : MonoBehaviour
                 startPower = stickAnimator.GetFloat(StickBender);
                 stickAnimator.SetBool(Start1,false);
                 isWorking = false;
-                //geçici
+                flag = true;
                 Invoke(nameof(ReleasePlayer),.24f);
             }
         }
     }
-
     private void ReleasePlayer()
     {
         releasePlayer = true;

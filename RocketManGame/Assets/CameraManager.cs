@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class CameraManager : MonoBehaviour
 {
+    #region Singleton
     private static CameraManager _instance;
     public static CameraManager Instance
     {
@@ -19,24 +20,21 @@ public class CameraManager : MonoBehaviour
         }
         
     }
-
-    [SerializeField] public PlayerMovement playerMovement;
     
-    [SerializeField] private GameObject camPosition;
+    #endregion
+    
     [SerializeField] private GameObject player;
-
-    public bool turnOffRb = false;
+    
     public bool changeCameraToSecondPosition  = false;
     public bool playerAirControl  = false;
 
     private Camera mainCam;
-    // Start is called before the first frame update
+    
     void Start()
     {
         mainCam = this.gameObject.GetComponent<Camera>();
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         mainCam.transform.DOLookAt(player.transform.position, 
@@ -46,14 +44,11 @@ public class CameraManager : MonoBehaviour
             MoveCamera();
         }
     }
-
+    
     private void MoveCamera()
     {
         this.transform.parent = player.gameObject.transform;
-        mainCam.transform.DOLocalMove(new Vector3(player.transform.position.x,player.transform.position.y +15f,player.transform.position.z -30),  1f).OnComplete((() =>
-        {
-            //
-        }));
+        mainCam.transform.DOLocalMove(new Vector3(0f,25f,-30),  1.5f);
         changeCameraToSecondPosition = false;
         playerAirControl = true;
     }

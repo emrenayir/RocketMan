@@ -6,74 +6,66 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public Vector3 velocity;
-  
-    public bool jumpTest;
- 
-    [SerializeField] public bool working;
-    public CharacterController characterController;
-    public bool jumpingNow;
+    #region Variables
 
-    public bool canJump = true;
-    public bool halfJump = false;
-    public bool continuousJumps;
-    public bool moveDuringJumps;
-    public float waitBetweenJumps=2f;
-    public bool groundSensitiveJump= true;   
-    public bool timeSensitiveJump;
-    public float jumpingTime=3;
-    public bool _groundSensitiveJump;   
-    public bool _timeSensitiveJump;
-    public bool jumpDirectionAdditive;
+    public Vector3 velocity;
     public Vector3 specialJumpDirection;
     private Vector3 _specialJumpDirection;
     public Vector3 specialJumpGravityAxis;
     private Vector3 _specialJumpGravity;
+    public Vector3 gravityDirection = new Vector3(0,-1,0);
+    public Vector3 constantMovingDirection=new Vector3();
+    public Vector3 constantMovingForce;
+    public Vector3 gravitationalForce ;
+    
+    public bool jumpTest;
+    public bool canJump = true;
+    public bool halfJump = false;
+    public bool continuousJumps;
+    public bool moveDuringJumps;
+    public bool groundSensitiveJump= true;   
+    public bool timeSensitiveJump;
+    public bool jumpingNow;
+    public bool _timeSensitiveJump;
+    public bool jumpDirectionAdditive;
+    public bool _groundSensitiveJump;   
+    public bool useGravity;
+    public bool localGravity;
+    public bool useIncreasingGravity;
+    public bool onGround; 
+    public bool onSurface; 
+    public bool useLocalDirection;
+
+    public float jumpingTime=3;
+    public float waitBetweenJumps=2f;
     public float forwardJumpingPower=10;  
     public float _forwardJumpingPower;  
     public float upJumpingPower = 10;
     public float _upJumpingPower;
-    
-    
- 
-    
-    public bool useGravity;
-    public bool localGravity  ;
-    public Vector3 gravityDirection = new Vector3(0,-1,0);
     public float gravitationalPower=-9.81f;
     public float _gravitationalPower ;
-    public bool useIncreasingGravity;
-    public float gravityBuildUPPerSecond=1;
-    public List <Transform > surfaceCheckPositions;
-    public float defaultSurfaceCheckDistance=0.4f;
-    public List <float >  surfaceDetectionDistances ;
-    public LayerMask surfaceMask;
-    public LayerMask groundMask;
     public float maxExtraGravity= 25f;
     public float maxGravity ;
-    
-    
-    
+    public float gravityBuildUPPerSecond=1;
+    public float defaultSurfaceCheckDistance=0.4f;
     public float constantPower;
-    
-    public Vector3 constantMovingDirection=new Vector3();
-    public Vector3 constantMovingForce;
-    public bool useLocalDirection;
-
-    public Vector3 gravitationalForce ;
-    public bool onGround; 
-    public bool onSurface; 
-    
-    //------------------------------------------------------
-    
-    
-   
     private float counterJumpFactor =0;
-     
     
+    public List <Transform > surfaceCheckPositions;
+    public List <float >  surfaceDetectionDistances ;
+   
+    public LayerMask surfaceMask;
+    public LayerMask groundMask;
+    
+    public CharacterController characterController;
+    [SerializeField] public bool working;
+
+    #endregion
+    
+  
+    //------------------------------------------------------
     private void Start()
     {
-
         Adjustments();
     }
 
@@ -106,7 +98,7 @@ public class PlayerMovement : MonoBehaviour
         _timeSensitiveJump = timeSensitiveJump;
         _groundSensitiveJump = groundSensitiveJump;
         ResolveContrast();
-        getJumpType();
+        GetJumpType();
 
         gravityBuildUPPerSecond = Math.Abs(gravityBuildUPPerSecond);
         maxExtraGravity=  Math.Abs(maxExtraGravity);
@@ -116,7 +108,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    private void getJumpType()
+    private void GetJumpType()
     {
         _groundSensitiveJump = groundSensitiveJump;
         _timeSensitiveJump = timeSensitiveJump;
@@ -145,10 +137,6 @@ public class PlayerMovement : MonoBehaviour
                  
             }
         }
-
-        
-
-
     }
     private void CheckSurfaceCondition()
     {
@@ -166,13 +154,11 @@ public class PlayerMovement : MonoBehaviour
             {
                 _onSurface = true;
             }
-
             if (_onGround&&_onSurface)
             {
                 break;
             }
         }
-
         onGround = _onGround;
         onSurface = _onSurface;
     }
@@ -199,10 +185,6 @@ public class PlayerMovement : MonoBehaviour
                     }
                 }
             }
-
-
-
-
             if (localGravity)
             {
                 return getLocalDirection(gravityDirection, gameObject.transform, Math.Abs(_gravitationalPower));
@@ -221,7 +203,7 @@ public class PlayerMovement : MonoBehaviour
         if (canJump)
         {
             ResolveContrast();
-            getJumpType();
+            GetJumpType();
             JumpWithTime();
         }
     }
@@ -349,36 +331,10 @@ public class PlayerMovement : MonoBehaviour
         }
         
     }
-
     private void move(Vector3 theVelocity)
     {
         
         characterController.Move(theVelocity * Time.deltaTime) ;
-
-    }
-    
-    private void rotate(GameObject subject,bool turnX,bool turnY,bool turnZ,Vector3 angles,float xSpeed,float ySpeed, float zSpeed)
-    {
-
-
-        Quaternion currentRotation = subject.transform.rotation; 
-        
-        if (turnX)
-            subject.transform.rotation = Quaternion.RotateTowards(subject.transform.rotation, Quaternion.Euler(angles.x, currentRotation.y, currentRotation.z), xSpeed * Time.deltaTime);
-        
-        if (turnY)
-            subject.transform.rotation = Quaternion.RotateTowards(subject.transform.rotation, Quaternion.Euler(currentRotation.x, angles.y, currentRotation.z), ySpeed * Time.deltaTime);
-        
-        if (turnZ)
-            subject.transform.rotation = Quaternion.RotateTowards(subject.transform.rotation, Quaternion.Euler(currentRotation.x, currentRotation.y, angles.z), zSpeed * Time.deltaTime);
-
-        if (Math.Abs(currentRotation.x - angles.x) < 0.01f)
-            turnX = false;
-        if (Math.Abs(currentRotation.y - angles.y) < 0.01f)
-            turnY = false;
-        if (Math.Abs(currentRotation.z - angles.z) < 0.01f)
-            turnZ = false;
-
 
     }
 }

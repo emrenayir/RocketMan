@@ -400,6 +400,84 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   work: 0
   flag: 1
+--- !u!1 &575743483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 575743484}
+  - component: {fileID: 575743486}
+  - component: {fileID: 575743485}
+  m_Layer: 5
+  m_Name: FPS
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &575743484
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575743483}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.6260498, y: 1.6260498, z: 1.6260498}
+  m_Children: []
+  m_Father: {fileID: 1691642711}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 180, y: -55}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &575743485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575743483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 24
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 232
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: 0
+--- !u!222 &575743486
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575743483}
+  m_CullTransparentMesh: 0
 --- !u!4 &594843412 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4625606604390298265, guid: bc017545ff05c4ecc9db8ee65f7c7728,
@@ -756,6 +834,7 @@ GameObject:
   m_Component:
   - component: {fileID: 781476655}
   - component: {fileID: 781476654}
+  - component: {fileID: 781476656}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -789,6 +868,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &781476656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781476653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c35b81a47171ed4f9e1c18bb9618536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fpsText: {fileID: 575743485}
+  _hudRefreshRate: 1
 --- !u!1 &851201617
 GameObject:
   m_ObjectHideFlags: 0
@@ -1039,7 +1132,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f32e5e57289197d47b0dc141116bf0f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allowWastedTouch: 0
+  makeAutoCorrection: 1
+  correctionSpeed: 250
+  allowWastedTouch: 1
   useLimit: 1
   reverseInput: 1
   inputHorizontalElseVertical: 1
@@ -1539,6 +1634,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1147044549}
+  - {fileID: 575743484}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1933,7 +2029,8 @@ MonoBehaviour:
   rightWingTrail: {fileID: 84307134}
   playerTrail: {fileID: 907762180}
   groundSpawner: {fileID: 732151924}
-  FailUi: {fileID: 1147044548}
+  failUi: {fileID: 1147044548}
+  wingsCloseGravitySetter: 55
 --- !u!114 &1977801070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1946,6 +2043,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f32e5e57289197d47b0dc141116bf0f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  makeAutoCorrection: 0
+  correctionSpeed: 10
   allowWastedTouch: 0
   useLimit: 0
   reverseInput: 0
@@ -2037,7 +2136,7 @@ MonoBehaviour:
   onGround: 0
   onSurface: 0
   useLocalDirection: 1
-  jumpingTime: 0.5
+  jumpingTime: 1
   waitBetweenJumps: 2
   forwardJumpingPower: 300
   _forwardJumpingPower: 0
@@ -2127,11 +2226,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
-      objectReference: {fileID: 0}
-    - target: {fileID: 6177159595428391687, guid: 594d759afe2893b4d9e43daf3a19a00d,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 594d759afe2893b4d9e43daf3a19a00d, type: 3}

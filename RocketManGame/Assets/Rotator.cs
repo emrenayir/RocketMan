@@ -6,7 +6,7 @@ public class Rotator : MonoBehaviour
 {
     public bool work;
 
-    private bool flag = true;
+    public bool flag = true;
     // Update is called once per frame
     void Update()
     {
@@ -16,7 +16,6 @@ public class Rotator : MonoBehaviour
         }
         else if (flag)
         {
-            
                 Vector3 temp = transform.rotation.eulerAngles;
                 temp.x = 100.0f;
                 transform.rotation = Quaternion.Euler(temp);

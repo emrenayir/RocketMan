@@ -232,8 +232,9 @@ public class PlayerMovement : MonoBehaviour
         _upJumpingPower = upJumpingPower;
         jumpingNow = true;
         float jumpingForwardDuration =  halfJump ? jumpingTime : jumpingTime-0.2f;
+       
         bool flag1 = true;
-        float endForwardValue = flag1 ? 50 : 0;
+        float endForwardValue = flag1 ? constantPower : 0;
       
         DOTween.To(() => _forwardJumpingPower, x => _forwardJumpingPower = x, endForwardValue, jumpingForwardDuration).OnComplete(() =>
         { 
@@ -257,9 +258,7 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 jumpingNow = false;
-            }
-
-            SetConstant(100f);
+            } 
         });
 
 

@@ -8,15 +8,16 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 2
-  m_Shader: {fileID: 4800000, guid: d8dc5b44f974a407888d976711c36e82, type: 3}
+  m_Shader: {fileID: 4800000, guid: 881c73b45dda42d4ba29f8c7742329be, type: 3}
   m_ShaderKeywords: _MK_LIGHTMODEL_LAMBERT _MK_LIGHTTYPE_CEL_SHADE_SIMPLE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2000
   stringTagMap:
     IGNOREPROJECTOR: False
     QUEUE: Geometry
+    RenderType: Opaque
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -111,7 +112,7 @@ Material:
     - _HeightFogStart: -239.68
     - _LightCuts: 3
     - _LightModel: 1
-    - _LightSmoothness: 0.33
+    - _LightSmoothness: 0.345
     - _LightThreshold: 0.3
     - _LightType: 1
     - _MKEditorShowDetailBehavior: 0
@@ -138,7 +139,7 @@ Material:
     - _RimSmoothness: 0.5
     - _Roughness: 1
     - _Saturation: 1
-    - _ShadowIntensity: 1
+    - _ShadowIntensity: 0.477
     - _Shininess: 0.275
     - _SketchScale: 16
     - _SketchToneMax: 1

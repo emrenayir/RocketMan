@@ -11,6 +11,7 @@ public class StickBendAndRelease : MonoBehaviour
     [SerializeField] private float currentPixelPosHorizontal;
     [SerializeField] private float pixelStartPosHorizontal;
     [SerializeField] private bool startActive;
+    [SerializeField] private float startPower;
     
     
     private static readonly int Start1 = Animator.StringToHash("Start");
@@ -50,6 +51,7 @@ public class StickBendAndRelease : MonoBehaviour
             }
             if (Input.GetMouseButtonUp(0))
             {
+                startPower = stickAnimator.GetFloat(StickBender);
                 stickAnimator.SetBool(Start1,false);
                 isWorking = false;
                 //geçici

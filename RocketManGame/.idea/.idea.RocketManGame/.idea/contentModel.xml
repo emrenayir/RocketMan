@@ -117,6 +117,8 @@
           </e>
         </e>
         <e p="GameManager.cs" t="Include" />
+        <e p="GroundSpawner.cs" t="Include" />
+        <e p="GroundTile.cs" t="Include" />
         <e p="PlayerController.cs" t="Include" />
         <e p="playerMovement.cs" t="Include" />
         <e p="Rotator.cs" t="Include" />

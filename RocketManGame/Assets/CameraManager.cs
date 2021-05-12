@@ -50,7 +50,7 @@ public class CameraManager : MonoBehaviour
     private void MoveCamera()
     {
         this.transform.parent = player.gameObject.transform;
-        mainCam.transform.DOMove(camPosition.gameObject.transform.position, 1f).OnComplete((() =>
+        mainCam.transform.DOLocalMove(new Vector3(player.transform.position.x,player.transform.position.y +15f,player.transform.position.z -30),  1f).OnComplete((() =>
         {
             //
         }));

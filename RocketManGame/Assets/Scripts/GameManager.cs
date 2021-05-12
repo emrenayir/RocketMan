@@ -19,8 +19,9 @@ public class GameManager : MonoBehaviour
             return _instance;
         }
     }
-    
 
+    public bool isGameFinish = false;
+    
     public void ReloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

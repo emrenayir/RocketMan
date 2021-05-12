@@ -38,28 +38,37 @@ public class PlayerController : MonoBehaviour
     
     void Update()
     {
-        if (stickBendAndRelease.flag)
+        if (!GameManager.Instance.isGameFinish)
         {
-            SetPowerOfStartForce();
-        }
-        if (stickBendAndRelease.releasePlayer)
-        {
-            ReleasePlayerFromStick();
-        }
+            if (stickBendAndRelease.flag)
+            {
+                SetPowerOfStartForce();
+            }
+            if (stickBendAndRelease.releasePlayer)
+            {
+                ReleasePlayerFromStick();
+            }
 
-        if (CameraManager.Instance.playerAirControl && Input.GetMouseButtonDown(0))
-        {
-            OpenWings();
-        }
+            if (CameraManager.Instance.playerAirControl && Input.GetMouseButtonDown(0))
+            {
+                OpenWings();
+            }
 
-        if (!CameraManager.Instance.playerAirControl && Input.GetMouseButtonUp(0))
-        {
-            CloseWings();
-        }
+            if (!CameraManager.Instance.playerAirControl && Input.GetMouseButtonUp(0))
+            {
+                CloseWings();
+            }
 
-        if (playerMovement.onGround)
-        {
-            Fail();
+            if (playerMovement.onGround)
+            {
+                Fail();
+            }
+
+            if (this.transform.position.y < -150 )
+            {
+                Fail();
+                GameManager.Instance.ReloadScene();
+            }   
         }
     }
 
@@ -157,6 +166,9 @@ public class PlayerController : MonoBehaviour
         rotator.work = false;
         playerMovement.constantPower = 0f;
         failUi.SetActive(true);
+        GameManager.Instance.isGameFinish = true;
+        slideRotator.enabled = false;
+        slideRotator1.enabled = false;
     }
 
     private void CylinderJump()
